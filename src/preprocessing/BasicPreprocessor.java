@@ -1,32 +1,26 @@
 package preprocessing;
 
-import util.TextUtil;
-import java.util.*;
+import java.util.List;
+import java.util.Set;
 
 public class BasicPreprocessor implements Preprocessor {
+    private Set<String> stopwords;
 
-    private Set<String> stopwords = new HashSet<>(Arrays.asList(
-            "a", "an", "the", "is", "are", "was", "were",
-            "and", "or", "of", "to", "in", "on", "for",
-            "from", "with", "as", "by", "it", "this", "that"
-    ));
+    public BasicPreprocessor() {
+        // TODO:
+        // Inisialisasi daftar stopword
+        // Contoh: the, is, are, of, to, in, and, or, etc.
+    }
 
     @Override
     public List<String> process(String text) {
-        String cleanText = TextUtil.normalizeText(text);
-        String[] rawTokens = cleanText.split("\\s+");
-
-        List<String> tokens = new ArrayList<>();
-
-        for (String token : rawTokens) {
-            String normalized = TextUtil.normalizeToken(token);
-
-            if (normalized.isEmpty()) continue;
-            if (stopwords.contains(normalized)) continue;
-
-            tokens.add(normalized);
-        }
-
-        return tokens;
+        // TODO:
+        // 1. Normalize text dengan TextUtil
+        // 2. Split menjadi token
+        // 3. Normalize setiap token
+        // 4. Hapus token kosong
+        // 5. Hapus stopword
+        // 6. Return List<String> token bersih
+        throw new UnsupportedOperationException("TODO");
     }
 }

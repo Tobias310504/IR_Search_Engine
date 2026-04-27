@@ -1,41 +1,49 @@
 package core;
 
-import java.util.*;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 public class InvertedIndex {
-    private Map<String, Set<Integer>> index = new HashMap<>();
+    private Map<String, Set<Integer>> index;
+
+    public InvertedIndex() {
+        // TODO: inisialisasi index
+    }
 
     public void addDocument(int docId, List<String> tokens) {
-        for (String token : tokens) {
-            index.putIfAbsent(token, new HashSet<>());
-            index.get(token).add(docId);
-        }
+        // TODO:
+        // Untuk setiap token:
+        // 1. Jika token belum ada di index, buat posting list baru
+        // 2. Masukkan docId ke posting list token tersebut
     }
 
     public Set<Integer> getPostingList(String term) {
-        return new HashSet<>(index.getOrDefault(term, new HashSet<>()));
+        // TODO:
+        // Return daftar doc_id untuk term tertentu
+        throw new UnsupportedOperationException("TODO");
     }
 
     public boolean containsTerm(String term) {
-        return index.containsKey(term);
+        // TODO:
+        // Cek apakah term ada di index
+        throw new UnsupportedOperationException("TODO");
     }
 
     public Set<String> getVocabulary() {
-        return index.keySet();
-    }
-
-    public void printSampleIndex(int limit) {
-        int count = 0;
-
-        for (Map.Entry<String, Set<Integer>> entry : index.entrySet()) {
-            System.out.println(entry.getKey() + " -> " + entry.getValue());
-            count++;
-
-            if (count >= limit) break;
-        }
+        // TODO:
+        // Return semua term yang ada di index
+        throw new UnsupportedOperationException("TODO");
     }
 
     public int getVocabularySize() {
-        return index.size();
+        // TODO:
+        // Return jumlah term unik
+        throw new UnsupportedOperationException("TODO");
+    }
+
+    public void printSampleIndex(int limit) {
+        // TODO:
+        // Print beberapa isi inverted index untuk debugging
     }
 }

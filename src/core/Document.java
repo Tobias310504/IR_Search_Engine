@@ -6,20 +6,21 @@ public class Document {
     private String content;
 
     public Document(int id, String title, String content) {
-        this.id = id;
-        this.title = title;
-        this.content = content;
+        // TODO: simpan id, title, dan content ke atribut class
     }
 
     public int getId() {
-        return id;
+        // TODO: return id
+        throw new UnsupportedOperationException("TODO");
     }
 
     public String getTitle() {
-        return title;
+        // TODO: return title
+        throw new UnsupportedOperationException("TODO");
     }
 
     public String getContent() {
-        return content;
+        // TODO: return content
+        throw new UnsupportedOperationException("TODO");
     }
 }

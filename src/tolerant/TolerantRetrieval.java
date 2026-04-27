@@ -8,19 +8,26 @@ public class TolerantRetrieval {
     private EditDistanceStrategy editDistanceStrategy;
 
     public TolerantRetrieval() {
-        this.wildcardStrategy = new WildcardSearchStrategy();
-        this.editDistanceStrategy = new EditDistanceStrategy();
+        // TODO:
+        // Inisialisasi wildcard strategy
+        // Inisialisasi edit distance strategy
     }
 
     public Set<Integer> searchWildcard(String query, InvertedIndex index) {
-        return wildcardStrategy.search(query, index);
+        // TODO:
+        // Panggil wildcard strategy
+        throw new UnsupportedOperationException("TODO");
     }
 
     public Set<Integer> searchWithCorrection(String query, InvertedIndex index) {
-        return editDistanceStrategy.search(query, index);
+        // TODO:
+        // Panggil edit distance strategy
+        throw new UnsupportedOperationException("TODO");
     }
 
     public String suggestCorrection(String query, InvertedIndex index) {
-        return editDistanceStrategy.suggest(query, index);
+        // TODO:
+        // Return suggestion dari edit distance strategy
+        throw new UnsupportedOperationException("TODO");
     }
 }
