@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
         SearchEngine searchEngine = new SearchEngine(new BasicPreprocessor());
 
-        String filePath = "data/documents.txt";
+        String filePath = "data/dokumen.txt";
         searchEngine.buildIndex(filePath);
 
         Scanner scanner = new Scanner(System.in);

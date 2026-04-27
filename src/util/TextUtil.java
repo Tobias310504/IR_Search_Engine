@@ -13,8 +13,9 @@ public class TextUtil {
     }
 
     public static String normalizeToken(String token) {
-        if (token == null) return "";
-
+        if (token == null) {
+            return "";
+        }
         token = token.toLowerCase();
         token = token.replaceAll("[^a-z0-9]", "");
 
