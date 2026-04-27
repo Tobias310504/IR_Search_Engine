@@ -1,0 +1,10 @@
+1|Information Retrieval|Information retrieval is the process of finding relevant documents from a large collection. Search engines use indexing techniques to make retrieval faster and more accurate.
+2|Computer Science|Computer science is the study of algorithms, data structures, programming languages, and computational systems. It helps people solve problems using logical and systematic methods.
+3|Digital Library|A digital library stores books, journals, articles, and research papers in electronic format. Users can search the collection using keywords and retrieve relevant information.
+4|Machine Learning|Machine learning allows computer systems to learn patterns from data. It is widely used in recommendation systems, image recognition, fraud detection, and natural language processing.
+5|Database System|A database system stores and manages structured data. Users can insert, update, delete, and retrieve information using query languages.
+6|Search Engine|A search engine helps users find information on the internet. It uses crawling, indexing, and ranking methods to return relevant web pages.
+7|Cybersecurity|Cybersecurity protects computer systems, networks, and data from digital attacks. It includes encryption, authentication, malware detection, and access control.
+8|Cloud Computing|Cloud computing provides computing resources such as storage, servers, and applications through the internet. Companies use cloud services to reduce infrastructure costs.
+9|Software Engineering|Software engineering focuses on designing, developing, testing, and maintaining software systems. It uses structured methods to build reliable and scalable applications.
+10|Data Mining|Data mining is the process of discovering useful patterns from large datasets. It is often used in business analytics, customer behavior analysis, and decision support systems.
