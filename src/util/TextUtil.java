@@ -3,57 +3,47 @@ package util;
 public class TextUtil {
 
     public static String normalizeText(String text) {
-        if (text == null) return "";
-
-        return text
-                .toLowerCase()
-                .replaceAll("[^a-z0-9\\s]", " ")
-                .replaceAll("\\s+", " ")
-                .trim();
+        // TODO:
+        // 1. Handle jika text null
+        // 2. Ubah ke lowercase
+        // 3. Hapus tanda baca
+        // 4. Rapikan spasi
+        throw new UnsupportedOperationException("TODO");
     }
 
     public static String normalizeToken(String token) {
-        if (token == null) {
-            return "";
-        }
-        token = token.toLowerCase();
-        token = token.replaceAll("[^a-z0-9]", "");
-
-        return simpleStem(token);
+        // TODO:
+        // 1. Handle jika token null
+        // 2. Lowercase
+        // 3. Hapus karakter non-alfanumerik
+        // 4. Panggil simpleStem
+        throw new UnsupportedOperationException("TODO");
     }
 
     public static String simpleStem(String token) {
-        if (token.endsWith("ing") && token.length() > 5) {
-            return token.substring(0, token.length() - 3);
-        }
-
-        if (token.endsWith("ed") && token.length() > 4) {
-            return token.substring(0, token.length() - 2);
-        }
-
-        if (token.endsWith("s") && token.length() > 3) {
-            return token.substring(0, token.length() - 1);
-        }
-
-        return token;
+        // TODO:
+        // Buat stemming sederhana, misalnya:
+        // - hapus akhiran "ing"
+        // - hapus akhiran "ed"
+        // - hapus akhiran "s"
+        throw new UnsupportedOperationException("TODO");
     }
 
     public static boolean isBooleanOperator(String token) {
-        return token.equalsIgnoreCase("AND")
-                || token.equalsIgnoreCase("OR")
-                || token.equalsIgnoreCase("NOT");
+        // TODO:
+        // Cek apakah token adalah AND, OR, atau NOT
+        throw new UnsupportedOperationException("TODO");
     }
 
     public static boolean containsBooleanOperator(String query) {
-        String upper = query.toUpperCase();
-        return upper.contains(" AND ")
-                || upper.contains(" OR ")
-                || upper.contains(" NOT ")
-                || query.contains("(")
-                || query.contains(")");
+        // TODO:
+        // Cek apakah query mengandung AND, OR, NOT, atau tanda kurung
+        throw new UnsupportedOperationException("TODO");
     }
 
     public static boolean containsWildcard(String query) {
-        return query != null && query.contains("*");
+        // TODO:
+        // Cek apakah query mengandung "*"
+        throw new UnsupportedOperationException("TODO");
     }
 }
