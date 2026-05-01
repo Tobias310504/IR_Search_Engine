@@ -8,3 +8,93 @@
 8|Cloud Computing|Cloud computing provides computing resources such as storage, servers, and applications through the internet. Companies use cloud services to reduce infrastructure costs.
 9|Software Engineering|Software engineering focuses on designing, developing, testing, and maintaining software systems. It uses structured methods to build reliable and scalable applications.
 10|Data Mining|Data mining is the process of discovering useful patterns from large datasets. It is often used in business analytics, customer behavior analysis, and decision support systems.
+11|Natural Language Processing|Natural language processing helps computers understand and process human language. It is used in chatbots, machine translation, sentiment analysis, and text classification.
+12|Computer Networks|Computer networks allow devices to communicate and exchange data. Network protocols define how information is transmitted between computers and servers.
+13|Operating System|An operating system manages hardware resources and provides services for software applications. It controls memory, processes, files, and input output devices.
+14|Web Development|Web development is the process of creating websites and web applications. It involves frontend design, backend programming, databases, and server deployment.
+15|Mobile Application|Mobile applications are software programs designed to run on smartphones and tablets. They are used for communication, education, banking, entertainment, and productivity.
+16|Artificial Intelligence|Artificial intelligence enables machines to perform tasks that normally require human intelligence. These tasks include reasoning, learning, planning, and problem solving.
+17|Data Visualization|Data visualization presents data in graphical forms such as charts, maps, and dashboards. It helps users understand trends, patterns, and comparisons more easily.
+18|Information System|An information system combines people, processes, data, and technology to support organizational activities. It helps businesses manage operations and make decisions.
+19|Robotics|Robotics combines mechanical engineering, electronics, and computer science to build intelligent machines. Robots can perform tasks in manufacturing, healthcare, logistics, and exploration.
+20|Human Computer Interaction|Human computer interaction studies how people interact with digital systems. Good interface design improves usability, accessibility, and user satisfaction.
+21|Algorithm Design|Algorithm design focuses on creating step by step procedures to solve computational problems. Efficient algorithms can reduce processing time and memory usage.
+22|Distributed System|A distributed system consists of multiple computers that work together as a single system. It improves scalability, reliability, and resource sharing.
+23|Big Data|Big data refers to extremely large and complex datasets that are difficult to process using traditional tools. It requires special methods for storage, processing, and analysis.
+24|Blockchain Technology|Blockchain technology stores data in a distributed and tamper resistant ledger. It is commonly used in cryptocurrency, digital identity, and secure transaction systems.
+25|Internet of Things|The internet of things connects physical devices to the internet so they can collect and exchange data. Smart sensors are used in homes, factories, cities, and transportation systems.
+26|Data Privacy|Data privacy focuses on protecting personal information from unauthorized access and misuse. Organizations must handle user data responsibly and follow security regulations.
+27|Computer Vision|Computer vision allows computers to analyze and understand images or videos. It is used in facial recognition, medical imaging, autonomous vehicles, and quality inspection.
+28|Recommendation System|A recommendation system suggests products, movies, music, or content based on user preferences. It often uses user behavior data and machine learning techniques.
+29|Educational Technology|Educational technology uses digital tools to support teaching and learning activities. Online learning platforms help students access materials, quizzes, and virtual classrooms.
+30|Bioinformatics|Bioinformatics applies computer science to analyze biological data. It is used in genomics, drug discovery, protein analysis, and medical research.
+31|Electronic Commerce|Electronic commerce allows people to buy and sell goods or services through online platforms. It relies on payment systems, product catalogs, user reviews, and secure transactions.
+32|Social Media Analytics|Social media analytics examines data from online platforms to understand public opinion and user behavior. It can be used for marketing, trend detection, and sentiment analysis.
+33|Knowledge Graph|A knowledge graph represents entities and their relationships in a structured form. It helps search engines and intelligent systems understand connections between concepts.
+34|Text Mining|Text mining extracts useful information from unstructured text documents. It can identify keywords, topics, opinions, and relationships in large document collections.
+35|Enterprise System|An enterprise system supports business processes across departments such as finance, sales, inventory, and human resources. It helps organizations integrate data and improve efficiency.
+36|Data Warehouse|A data warehouse stores historical data from multiple sources for analysis and reporting. It supports business intelligence, dashboards, and decision making.
+37|User Experience Design|User experience design focuses on creating products that are useful, usable, and enjoyable. Designers study user needs, workflows, and interface behavior.
+38|Application Programming Interface|An application programming interface allows different software systems to communicate with each other. APIs are commonly used to connect web services, mobile applications, and databases.
+39|Parallel Computing|Parallel computing divides a large computational task into smaller parts that run at the same time. It can improve performance for simulations, data processing, and scientific computing.
+40|Smart City|A smart city uses digital technology and data to improve urban services. Smart traffic systems, public safety platforms, and energy monitoring can make cities more efficient.
+41|Network Security|Network security protects computer networks from unauthorized access, attacks, and data theft. Firewalls, intrusion detection systems, and encryption are common protection methods.
+42|Quantum Computing|Quantum computing uses principles of quantum mechanics to process information. It has potential applications in cryptography, optimization, material science, and complex simulations.
+43|Game Development|Game development is the process of designing and building digital games. It includes programming, graphics, physics, sound design, storytelling, and user interaction.
+44|Virtual Reality|Virtual reality creates immersive digital environments that users can experience through special devices. It is used in gaming, training, education, and medical simulation.
+45|Augmented Reality|Augmented reality adds digital information to the real world through cameras or smart glasses. It can support navigation, education, industrial maintenance, and interactive marketing.
+46|DevOps|DevOps combines software development and IT operations to improve delivery speed and system reliability. It uses automation, continuous integration, testing, and monitoring.
+47|Software Testing|Software testing checks whether a program works correctly and meets user requirements. Testing can include unit testing, integration testing, system testing, and acceptance testing.
+48|Edge Computing|Edge computing processes data near the source instead of sending everything to a central cloud server. It reduces latency and supports real time applications such as smart cameras and autonomous vehicles.
+49|Digital Forensics|Digital forensics investigates data from computers, mobile devices, and networks to find evidence of cyber incidents. It is used in law enforcement, fraud investigation, and incident response.
+50|Green Computing|Green computing focuses on designing and using computer systems in an environmentally responsible way. It aims to reduce energy consumption, electronic waste, and carbon emissions.
+51|Computer Architecture|Computer architecture describes the design and organization of computer hardware components. It explains how processors, memory, buses, and input output systems work together to execute instructions.
+52|Compiler Design|Compiler design studies how programming languages are translated into machine code. A compiler usually performs lexical analysis, syntax analysis, semantic analysis, optimization, and code generation.
+53|Information Security|Information security protects data from unauthorized access, modification, disclosure, and destruction. It includes confidentiality, integrity, availability, authentication, and risk management.
+54|Cryptography|Cryptography is the science of securing information using mathematical techniques. It is used to protect messages, passwords, digital signatures, and secure online transactions.
+55|Data Compression|Data compression reduces the size of files or data streams. It can improve storage efficiency and reduce transmission time across computer networks.
+56|Multimedia System|A multimedia system manages different types of media such as text, audio, images, animation, and video. It is commonly used in education, entertainment, advertising, and digital communication.
+57|Geographic Information System|A geographic information system collects, stores, analyzes, and visualizes spatial data. It is useful for mapping, urban planning, transportation analysis, and environmental monitoring.
+58|Decision Support System|A decision support system helps users analyze data and evaluate alternatives. It supports managers in making structured and semi structured decisions.
+59|Expert System|An expert system uses knowledge and rules to solve problems in a specific domain. It can support diagnosis, recommendation, planning, and troubleshooting tasks.
+60|Pattern Recognition|Pattern recognition identifies regularities or structures in data. It is used in handwriting recognition, speech recognition, medical diagnosis, and image classification.
+61|Speech Recognition|Speech recognition converts spoken language into text. It is used in virtual assistants, transcription systems, voice commands, and accessibility tools.
+62|Image Processing|Image processing applies computational techniques to improve or analyze images. Common operations include filtering, edge detection, segmentation, enhancement, and object detection.
+63|Sentiment Analysis|Sentiment analysis identifies opinions and emotions expressed in text. It is often used to analyze product reviews, social media posts, and customer feedback.
+64|Topic Modeling|Topic modeling discovers hidden themes in a collection of documents. It helps summarize large text datasets and organize information automatically.
+65|Information Extraction|Information extraction identifies structured information from unstructured text. It can extract names, dates, locations, events, and relationships from documents.
+66|Question Answering System|A question answering system returns direct answers to user questions. It combines natural language processing, information retrieval, and knowledge representation.
+67|Document Classification|Document classification assigns text documents into predefined categories. It is useful for email filtering, news classification, legal document organization, and academic indexing.
+68|Document Clustering|Document clustering groups similar documents without predefined labels. It helps users explore large collections and discover related topics.
+69|Web Crawler|A web crawler automatically visits web pages and collects information for indexing. Search engines use crawlers to discover new pages and update existing content.
+70|Indexing Technique|Indexing techniques improve the speed of searching in large document collections. An inverted index maps terms to the documents where they appear.
+71|Boolean Retrieval|Boolean retrieval uses logical operators to combine search terms. Users can apply AND, OR, and NOT to control which documents are returned.
+72|Tolerant Retrieval|Tolerant retrieval allows a search system to handle imperfect queries. It can support spelling correction, wildcard matching, and approximate string matching.
+73|Levenshtein Distance|Levenshtein distance measures the minimum number of edits required to change one word into another. It is commonly used for spelling correction and fuzzy matching.
+74|Wildcard Search|Wildcard search allows users to search using incomplete word patterns. A query such as comput star can match computer, computing, and computation.
+75|Posting List|A posting list contains the identifiers of documents that contain a specific term. It is an important component of an inverted index in information retrieval systems.
+76|Tokenization|Tokenization splits text into smaller units such as words or terms. It is one of the first steps in text preprocessing and document indexing.
+77|Stopword Removal|Stopword removal eliminates common words that may not be useful for retrieval. Words such as the, is, and of are often removed during preprocessing.
+78|Stemming|Stemming reduces words to simpler base forms by removing common suffixes. For example, searching, searched, and searches can be reduced to search.
+79|Query Processing|Query processing transforms a user query into a form that can be evaluated by a retrieval system. It may include tokenization, parsing, normalization, and operator handling.
+80|Ranking Algorithm|A ranking algorithm orders search results based on estimated relevance. Although Boolean retrieval returns matching documents, ranked retrieval can sort documents by importance.
+81|Term Frequency|Term frequency counts how often a term appears in a document. It is often used to estimate the importance of a word within a specific document.
+82|Inverse Document Frequency|Inverse document frequency measures how rare or common a term is across a document collection. Rare terms are often more useful for distinguishing relevant documents.
+83|Vector Space Model|The vector space model represents documents and queries as vectors of term weights. Similarity between a query and a document can be measured using cosine similarity.
+84|Cosine Similarity|Cosine similarity measures the angle between two vectors. In text retrieval, it is often used to compare the similarity between a query and a document.
+85|Evaluation Metrics|Evaluation metrics are used to measure the quality of a search system. Common metrics include precision, recall, accuracy, F measure, and mean average precision.
+86|Precision and Recall|Precision measures how many retrieved documents are relevant, while recall measures how many relevant documents are retrieved. Both metrics are important in information retrieval evaluation.
+87|Search Result|A search result is the output returned by a retrieval system after processing a query. It usually contains document identifiers, titles, snippets, and relevance information.
+88|Text Preprocessing|Text preprocessing prepares raw text for analysis and indexing. It can include lowercasing, punctuation removal, tokenization, stopword removal, and stemming.
+89|Corpus|A corpus is a collection of text documents used for analysis or retrieval. In an information retrieval system, the corpus becomes the searchable document collection.
+90|Metadata|Metadata describes information about a document such as title, author, date, category, and source. It can help users filter and understand search results.
+91|File Processing|File processing involves reading, writing, and managing files in a computer program. A retrieval system may read document collections from text files before indexing them.
+92|Hash Map|A hash map stores key value pairs and allows fast lookup. In an inverted index, a term can be used as a key and a posting list can be used as the value.
+93|Set Operation|Set operations are useful for Boolean retrieval. Intersection supports AND queries, union supports OR queries, and complement supports NOT queries.
+94|Query Parser|A query parser analyzes the structure of a search query. It identifies terms, operators, parentheses, and the correct order of evaluation.
+95|Expression Tree|An expression tree represents a query as a tree structure. Each internal node can represent an operator, while each leaf node can represent a search term.
+96|Software Modularity|Software modularity divides a program into smaller independent components. A modular search engine is easier to test, maintain, and extend.
+97|Design Pattern|A design pattern is a reusable solution to a common software design problem. Patterns such as Facade, Strategy, and Composite can help organize a retrieval system.
+98|Command Line Interface|A command line interface allows users to interact with a program using text commands. A simple retrieval system can use a terminal menu to accept search queries.
+99|Program Testing|Program testing checks whether each feature works as expected. A search engine should be tested using single term queries, Boolean queries, wildcard queries, and typo queries.
+100|System Documentation|System documentation explains how a program works and how users can run it. A good README should describe the dataset format, program features, compile commands, and example queries.

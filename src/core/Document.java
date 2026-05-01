@@ -1,26 +1,26 @@
 package core;
-
+//kelas untuk menyimpan id, title, dan content dari 1 dokumen id
 public class Document {
     private int id;
     private String title;
     private String content;
 
+    //konstruktur dari dokumen
     public Document(int id, String title, String content) {
-        // TODO: simpan id, title, dan content ke atribut class
+        this.id = id;
+        this.title = title;
+        this.content = content;
     }
 
     public int getId() {
-        // TODO: return id
-        throw new UnsupportedOperationException("TODO");
+        return id;
     }
 
     public String getTitle() {
-        // TODO: return title
-        throw new UnsupportedOperationException("TODO");
+        return title;
     }
 
     public String getContent() {
-        // TODO: return content
-        throw new UnsupportedOperationException("TODO");
+        return content;
     }
 }
