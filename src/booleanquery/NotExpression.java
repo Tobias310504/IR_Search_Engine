@@ -7,7 +7,7 @@ public class NotExpression implements QueryExpression {
     private QueryExpression expression;
 
     public NotExpression(QueryExpression expression) {
-        // TODO: simpan expression
+        this.expression = expression;
     }
 
     @Override
