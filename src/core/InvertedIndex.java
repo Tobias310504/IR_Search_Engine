@@ -1,49 +1,61 @@
 package core;
 
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class InvertedIndex {
+    //atribut untuk invertedIndex, posting list dibuat dengan menggunakan hashmap <String (untuk term),Set<Integer> (untuk docIdnya)>
     private Map<String, Set<Integer>> index;
-
+    //konstruktor untuk kelas Inverted Index
     public InvertedIndex() {
-        // TODO: inisialisasi index
+        this.index = new HashMap<>();
     }
 
     public void addDocument(int docId, List<String> tokens) {
-        // TODO:
         // Untuk setiap token:
-        // 1. Jika token belum ada di index, buat posting list baru
-        // 2. Masukkan docId ke posting list token tersebut
+        for (String token : tokens) {
+            // kalau token belum ada
+            if(!index.containsKey(token)) {
+                //buat term baru untuk posting list
+                index.put(token, new TreeSet<Integer>());
+            }
+            // mengambil postinglist berdasarkan term yaitu token lalu memasukan docId ke dalam hashmap untuk membuat posting list
+            index.get(token).add(docId);
+        }
     }
-
+    // method untuk mengembalikan daftar doc_id untuk term tertentu, kalau term belum ada maka akan mengembalikan treeset (postinglist) dengan term baru
     public Set<Integer> getPostingList(String term) {
-        // TODO:
-        // Return daftar doc_id untuk term tertentu
-        throw new UnsupportedOperationException("TODO");
+        //kalau term belum ada di kumpulan posting list
+        if(!index.containsKey(term)) {
+            //buat postinglist baru dengan term yang baru
+            return new TreeSet<>(index.get(term));
+        }
+        //kembalikan postinglist berdasarkan termnya
+        return index.get(term);
     }
-
+    // method untuk cek apakah term ada di index, true kalau term sudah ada, false kalau term belum ada
     public boolean containsTerm(String term) {
-        // TODO:
-        // Cek apakah term ada di index
-        throw new UnsupportedOperationException("TODO");
+        return index.containsKey(term);
     }
-
+    // method untuk mengembalikan semua term yang ada di index
     public Set<String> getVocabulary() {
-        // TODO:
-        // Return semua term yang ada di index
-        throw new UnsupportedOperationException("TODO");
+      return  index.keySet();
     }
-
+    //mengembalikan jumlah term
     public int getVocabularySize() {
-        // TODO:
-        // Return jumlah term unik
-        throw new UnsupportedOperationException("TODO");
+        return index.size();
     }
-
+    // method untuk ngeprint inverted index
     public void printSampleIndex(int limit) {
-        // TODO:
-        // Print beberapa isi inverted index untuk debugging
+        int count = 0;
+        //loop untuk setiap postinglist
+        for(Map.Entry<String, Set<Integer>> entry : index.entrySet()) {
+            //kalau count belum lebih besar dari limit print posting list
+            System.out.println(entry.getKey() + "->" + entry.getValue());
+            count++;
+            //kalau count lebih besar daripada limit maka print berhenti
+            if(count > limit){
+                break;
+            }
+        }
     }
 }
