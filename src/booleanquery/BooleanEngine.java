@@ -11,6 +11,8 @@ public class BooleanEngine {
         // TODO:
         // Simpan index
         // Inisialisasi parser
+        this.index = index;
+        this.parser = new QueryParser();
     }
 
     public Set<Integer> search(String query, Set<Integer> allDocumentIds) {
@@ -18,6 +20,8 @@ public class BooleanEngine {
         // 1. Parse query menjadi QueryExpression
         // 2. Evaluate expression
         // 3. Return hasil doc_id
-        throw new UnsupportedOperationException("TODO");
+        QueryExpression expression = parser.parse(query);
+        return expression.evaluate(index, allDocumentIds);
+        //throw new UnsupportedOperationException("TODO");
     }
 }

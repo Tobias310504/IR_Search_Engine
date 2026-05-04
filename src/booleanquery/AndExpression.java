@@ -8,7 +8,8 @@ public class AndExpression implements QueryExpression {
     private QueryExpression right;
 
     public AndExpression(QueryExpression left, QueryExpression right) {
-        // TODO: simpan left dan right expression
+        this.left = left;
+        this.right = right;
     }
 
     @Override
@@ -17,6 +18,9 @@ public class AndExpression implements QueryExpression {
         // 1. Evaluasi left
         // 2. Evaluasi right
         // 3. Lakukan intersection
-        throw new UnsupportedOperationException("TODO");
+        Set<Integer> leftResult = left.evaluate(index, allDocumentIds);
+        Set<Integer> rightResult = right.evaluate(index, allDocumentIds);
+        leftResult.retainAll(rightResult);
+        return leftResult;
     }
 }

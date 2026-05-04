@@ -9,6 +9,8 @@ public class OrExpression implements QueryExpression {
 
     public OrExpression(QueryExpression left, QueryExpression right) {
         // TODO: simpan left dan right expression
+        this.left = left;
+        this.right = right;
     }
 
     @Override
@@ -17,6 +19,9 @@ public class OrExpression implements QueryExpression {
         // 1. Evaluasi left
         // 2. Evaluasi right
         // 3. Lakukan union
-        throw new UnsupportedOperationException("TODO");
+        Set<Integer> leftResult = left.evaluate(index, allDocumentIds);
+        Set<Integer> rightResult = right.evaluate(index, allDocumentIds);
+        leftResult.addAll(rightResult);
+        return leftResult;
     }
 }
