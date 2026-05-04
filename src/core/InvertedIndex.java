@@ -9,7 +9,7 @@ public class InvertedIndex {
     public InvertedIndex() {
         this.index = new HashMap<>();
     }
-
+    //method untuk memasukan dokumen baru ke dalam posting list
     public void addDocument(int docId, List<String> tokens) {
         // Untuk setiap token:
         for (String token : tokens) {
@@ -25,7 +25,7 @@ public class InvertedIndex {
     // method untuk mengembalikan daftar doc_id untuk term tertentu, kalau term belum ada maka akan mengembalikan treeset (postinglist) dengan term baru
     public Set<Integer> getPostingList(String term) {
         //kalau term belum ada di kumpulan posting list
-        if(!index.containsKey(term)) {
+        if(index.containsKey(term)) {
             //buat postinglist baru dengan term yang baru
             return new TreeSet<>(index.get(term));
         }
