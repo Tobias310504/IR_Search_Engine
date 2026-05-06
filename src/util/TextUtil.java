@@ -69,7 +69,16 @@ public class TextUtil {
 
     public static boolean containsWildcard(String query) {
         // TODO:
+        //kalau query null berarti tidak ada wildcard
+        if(query==null) {
+            return false;
+        }
         // Cek apakah query mengandung "*"
-        throw new UnsupportedOperationException("TODO");
+        if(!query.contains("*")) {
+            return false;
+        }
+        //kalau ada "*" return true
+        return true;
+
     }
 }
