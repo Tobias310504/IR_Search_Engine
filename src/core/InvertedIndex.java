@@ -29,8 +29,8 @@ public class InvertedIndex {
             //buat postinglist baru dengan term yang baru
             return new TreeSet<>(index.get(term));
         }
-        //kembalikan postinglist berdasarkan termnya
-        return index.get(term);
+        //kembalikan postinglist baru kalau belum ada termnya
+        return new TreeSet<>();
     }
     // method untuk cek apakah term ada di index, true kalau term sudah ada, false kalau term belum ada
     public boolean containsTerm(String term) {
@@ -49,13 +49,15 @@ public class InvertedIndex {
         int count = 0;
         //loop untuk setiap postinglist
         for(Map.Entry<String, Set<Integer>> entry : index.entrySet()) {
-            //kalau count belum lebih besar dari limit print posting list
-            System.out.println(entry.getKey() + "->" + entry.getValue());
-            count++;
             //kalau count lebih besar daripada limit maka print berhenti
             if(count > limit){
                 break;
             }
+            //kalau count belum lebih besar dari limit print posting list
+            System.out.println(entry.getKey() + "->" + entry.getValue());
+            //kalau belum limit tambahkan terus countnya
+            count++;
+
         }
     }
 }

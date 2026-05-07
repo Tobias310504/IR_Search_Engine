@@ -18,6 +18,7 @@ public class QueryParser {
         //List<String> fixed = insertImplicitAndBeforeNot(tokens);
         //List<String> postfix = toPostfix(fixed);
         //return buildExpressionTree(postfix);
+        return null;
     }
 
     private List<String> tokenize(String query) {

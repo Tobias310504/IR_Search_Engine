@@ -10,9 +10,9 @@ public class TextUtil {
         //mengubah text ke lowercase
         text = text.toLowerCase();
         //Hapus tanda baca dang menggantinya dengan spasi
-        text = text.replace("[^a-z0-9\\s]"," ");
+        text = text.replaceAll("[^a-z0-9\\s]"," ");
         //Merapihkan spasi yang berlebih menjadi satu spasi
-        text = text.replace("\\s+", " ");
+        text = text.replaceAll("\\s+", " ");
         //Rapikan spasi diawal dan akhir
         text = text.trim();
         return text;
@@ -45,13 +45,11 @@ public class TextUtil {
         if(token.endsWith("ed") && token.length()>4) {
             return token.substring(0, token.length()-2);
         }
-        // hapus token dengan akhiran "s"
-        if(token.endsWith("es") && token.length()>4) {
-            return token.substring(0, token.length()-2);
-        }
+        //hapus token dengan akhiran "s"
         if(token.endsWith("s") && token.length()>3 && !token.endsWith("ss") && !token.endsWith("us") && !token.endsWith("is")) {
             return token.substring(0, token.length()-1);
         }
+        //kemabilkan token yang sudah di normalisasi
         return token;
     }
 
@@ -68,7 +66,6 @@ public class TextUtil {
     }
 
     public static boolean containsWildcard(String query) {
-        // TODO:
         //kalau query null berarti tidak ada wildcard
         if(query==null) {
             return false;

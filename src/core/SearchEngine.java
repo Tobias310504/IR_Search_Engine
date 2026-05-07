@@ -25,16 +25,17 @@ public class SearchEngine {
     }
     //method untuk membaca dokumen dan memproses dokumennya menjadi token yang akan dimasukan ke inverted index untuk dijadikan posting list
     public void buildIndex(String filePath) {
-        //load dokumen dari file
-        DocumentStore store = new DocumentStore();
-        store.loadFromFile("data/dokumen.txt");
+        //load file dokumen
+        this.documentStore.loadFromFile(filePath);
         // loop untuk setiap dokumen:
-            for (Document document : store.getAllDocuments()){
+            for (Document document : this.documentStore.getAllDocuments()){
                 //ambil content untuk setiap doc lalu lakukan preprocess untuk setiap dokumen untuk dijadikan token
                 List<String> tokens = preprocessor.process(document.getContent());
                 //masukkan token ke inverted index
                 invertedIndex.addDocument(document.getId(), tokens);
             }
+            //membangun wildcard trie setelah inverted index selesai
+            tolerantRetrieval.buildWildcardTrie(invertedIndex);
     }
 
     public Set<Integer> search(String query) {
@@ -54,8 +55,8 @@ public class SearchEngine {
             return booleanEngine.search(query, documentStore.getAllDocumentIds());
         }
         //Jika query single term harus di normalisasikan terlebih dahulu supaya mirip seperti dokumen-dokumen yang sudah di preprocesskan
-        String normalizedQuery = TextUtil.normalizeText(query);
-        //Jika term tidak ditemukan, pakai edit distance
+        String normalizedQuery = TextUtil.normalizeToken(query);
+        //Jika term tidak ditemukan, pakai edit distance, pakai token karna kalau single query akan sama dengan token
         if(invertedIndex.containsTerm(normalizedQuery)){
             return invertedIndex.getPostingList(normalizedQuery);
         }
