@@ -24,10 +24,12 @@ public class WildcardSearchStrategy implements TolerantSearchStrategy {
         //inisialisasi Set<integer> kosong
         TreeSet<Integer> result = new TreeSet<Integer>();
         //kalau query kosong atau query null
-        if(query.length() == 0 || query == null) {
+        if(query == null || query.trim().isEmpty()) {
             //kembalikan treeset kosong
             return result;
         }
+        //kecilkan querynya
+        query = query.toLowerCase().trim();
         //cek apakah query punya * di dalam katanya
         if(!query.contains("*")){
             //jika tidak ada maka return result

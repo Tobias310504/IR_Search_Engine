@@ -21,8 +21,10 @@ public class EditDistanceStrategy implements TolerantSearchStrategy {
     public Set<Integer> search(String query, InvertedIndex index) {
         //inisialisasi result kosong
         Set<Integer> result = new TreeSet<>();
+        //reset suggestion ke null
+        this.lastSuggestion = null;
         //kalau querynya nya null atau kosong return result kosong
-        if(query==null || query.length()==0) {
+        if(query == null || query.trim().isEmpty()) {
             return result;
         }
         //kalau indexnya null return result kosong
@@ -30,7 +32,7 @@ public class EditDistanceStrategy implements TolerantSearchStrategy {
             return result;
         }
         //query nya normalisasi dulu
-        query = TextUtil.normalizeText(query);
+        query = TextUtil.normalizeToken(query);
         //kalau querynya kosong return result kosong
         if(query.isEmpty()){
             return result;
