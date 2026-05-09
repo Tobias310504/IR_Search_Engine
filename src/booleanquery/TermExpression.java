@@ -7,15 +7,11 @@ public class TermExpression implements QueryExpression {
     private String term;
 
     public TermExpression(String term) {
-        // TODO: simpan term
         this.term = term;
     }
 
     @Override
     public Set<Integer> evaluate(InvertedIndex index, Set<Integer> allDocumentIds) {
-        // TODO:
-        // Return posting list dari term
-        return index.getPostingList(term);
-        //throw new UnsupportedOperationException("TODO");
+        return index.getPostingList(term);//Ambil posting list dari term
     }
 }
