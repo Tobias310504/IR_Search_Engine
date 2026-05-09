@@ -22,6 +22,7 @@ public class SearchEngine {
         this.preprocessor = preprocessor;
         this.invertedIndex = new InvertedIndex();
         this.tolerantRetrieval = new TolerantRetrieval();
+        this.booleanEngine = new BooleanEngine(invertedIndex);
     }
     //method untuk membaca dokumen dan memproses dokumennya menjadi token yang akan dimasukan ke inverted index untuk dijadikan posting list
     public void buildIndex(String filePath) {
