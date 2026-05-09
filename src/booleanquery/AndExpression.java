@@ -14,13 +14,10 @@ public class AndExpression implements QueryExpression {
 
     @Override
     public Set<Integer> evaluate(InvertedIndex index, Set<Integer> allDocumentIds) {
-        // TODO:
-        // 1. Evaluasi left
-        // 2. Evaluasi right
-        // 3. Lakukan intersection
-        Set<Integer> leftResult = left.evaluate(index, allDocumentIds);
-        Set<Integer> rightResult = right.evaluate(index, allDocumentIds);
-        leftResult.retainAll(rightResult);
+        Set<Integer> leftResult = left.evaluate(index, allDocumentIds);//Evaluasi left
+        Set<Integer> rightResult = right.evaluate(index, allDocumentIds);//Evaluasi right
+        
+        leftResult.retainAll(rightResult);//Lakukan intersection
         return leftResult;
     }
 }
