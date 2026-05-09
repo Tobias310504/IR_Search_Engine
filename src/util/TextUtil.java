@@ -54,15 +54,17 @@ public class TextUtil {
     }
 
     public static boolean isBooleanOperator(String token) {
-        // TODO:
-        // Cek apakah token adalah AND, OR, atau NOT
-        throw new UnsupportedOperationException("TODO");
+        //cek apakah token adalah AND, OR, atau NOT
+        return token.equalsIgnoreCase("AND") || token.equalsIgnoreCase("OR") || token.equalsIgnoreCase("NOT");
     }
 
     public static boolean containsBooleanOperator(String query) {
-        // TODO:
-        // Cek apakah query mengandung AND, OR, NOT, atau tanda kurung
-        throw new UnsupportedOperationException("TODO");
+        //cek apakah query mengandung AND, OR, NOT, atau tanda kurung
+        if(query == null){
+            return false;
+        }
+        String upper = query.toUpperCase();
+        return upper.contains(" AND ") || upper.contains(" OR ") || upper.contains(" NOT ") || query.contains("(") || query.contains(")");
     }
 
     public static boolean containsWildcard(String query) {

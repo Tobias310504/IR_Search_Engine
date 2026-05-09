@@ -16,7 +16,7 @@ public class AndExpression implements QueryExpression {
     public Set<Integer> evaluate(InvertedIndex index, Set<Integer> allDocumentIds) {
         Set<Integer> leftResult = left.evaluate(index, allDocumentIds);//Evaluasi left
         Set<Integer> rightResult = right.evaluate(index, allDocumentIds);//Evaluasi right
-        
+
         leftResult.retainAll(rightResult);//Lakukan intersection
         return leftResult;
     }
