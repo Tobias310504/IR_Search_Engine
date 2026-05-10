@@ -45,7 +45,7 @@ public class Main {
 
                 System.out.println("\nSearch results for: " + query);
                 //kalau query tidak ditemukan maka akan mengeluarkan term suggestion
-                if (engine.getLastSuggestion() != null) {
+                if (!results.isEmpty() && engine.getLastSuggestion() != null) {
                     System.out.println("Did you mean: " + engine.getLastSuggestion());
                 }
                 // kalau ada akan mengeluarkan
