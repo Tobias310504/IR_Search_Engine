@@ -64,7 +64,7 @@ public class TextUtil {
             return false;
         }
         String upper = query.toUpperCase();
-        return upper.contains(" AND ") || upper.contains(" OR ") || upper.contains(" NOT ") || query.contains("(") || query.contains(")");
+        return upper.contains(" AND ") || upper.contains(" OR ") || upper.contains(" NOT ") || upper.startsWith("NOT") || query.contains("(") || query.contains(")");
     }
 
     public static boolean containsWildcard(String query) {
