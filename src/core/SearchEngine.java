@@ -42,6 +42,8 @@ public class SearchEngine {
     public Set<Integer> search(String query) {
         //inisialisasi set dengan nama varriabel result
         Set<Integer> result = new TreeSet<>();
+        //reset suggestion setiap kali terjadi search dokumen
+        tolerantRetrieval.clearLastSuggestion();
         //kalau query null atau kosong return set kosong
         if(query == null || query.trim().isEmpty()){
             return result;

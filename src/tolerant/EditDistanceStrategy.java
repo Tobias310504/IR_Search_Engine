@@ -52,36 +52,49 @@ public class EditDistanceStrategy implements TolerantSearchStrategy {
     }
 
     public String suggest(String query, InvertedIndex index) {
-        //kalau query null atau kosong return null
-        if(query==null || query.length()==0) {
+        // kalau query null atau kosong, tidak ada suggestion
+        if (query == null || query.isEmpty()) {
             return null;
         }
-        //kalau di indexnya null return null
-        if(index==null) {
+
+        // kalau index null, tidak bisa mencari vocabulary
+        if (index == null) {
             return null;
         }
-        //normalisasi querynya terlebih dahulu agar sama dengan term" yg ada di posting list
-        query = TextUtil.normalizeText(query);
-        //inisialisasi term yang paling dekat dulu dan isi dengan null
+
+        // normalisasi query supaya sama dengan bentuk term di index
+        query = TextUtil.normalizeToken(query);
+
+        // kalau setelah normalisasi query kosong, return null
+        if (query.isEmpty()) {
+            return null;
+        }
+
+        // menyimpan term terbaik sementara
         String bestTerm = null;
-        //inisialisasi jarak terdekat dan berikan nilai yang paling besar karna yang akan diambil adalah jarak yang paling dekat
+
+        // menyimpan jarak edit terkecil sementara
         int bestDistance = Integer.MAX_VALUE;
-        //loop untuk membandingkan query dengan semua term di vocabulary
-        for(String term : index.getVocabulary()){
-            //cari jarak perubahannya dari apa yang dicari yaitu querynya dan apa yang ada di dokumen yaitu term
+
+        // bandingkan query dengan semua term di vocabulary
+        for (String term : index.getVocabulary()) {
             int distance = levenshteinDistance(query, term);
-            //ambil yang distancenya paling kecil
-            if(distance < bestDistance){
-                //best distancenya berubah dengan distance yang lebih kecil
+
+            // kalau distance lebih kecil dari bestDistance,
+            // update bestDistance dan bestTerm
+            if (distance < bestDistance) {
                 bestDistance = distance;
-                //termnya berubah ke term yang ada di dokumen dan paling mendekati query yang ada
                 bestTerm = term;
             }
         }
-        //kalau jaraknya masih dalam batas toleransi, kembalikan suggestionnya
-        if(bestDistance <= maxDistance){
+
+        // kalau jarak edit masih dalam batas toleransi,
+        // return term terbaik sebagai suggestion
+        if (bestDistance <= maxDistance) {
             return bestTerm;
         }
+
+        // kalau terlalu jauh, tidak ada suggestion
         return null;
     }
 
@@ -131,5 +144,11 @@ public class EditDistanceStrategy implements TolerantSearchStrategy {
     }
     public String getLastSuggestion(){
         return lastSuggestion;
+    }
+
+    //method untuk mengreset suggstion jadi null
+    public void clearLastSuggestion(){
+        //set lastSuggestion jadi null
+        this.lastSuggestion = null;
     }
 }
